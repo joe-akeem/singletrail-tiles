@@ -1,0 +1,74 @@
+{
+  "options": {
+    "paths": {
+      "root": "",
+      "styles": "/styles",
+      "mbtiles": "/data"
+    },
+    "domains": [
+      "localhost:8080",
+      "127.0.0.1:8080"
+    ],
+    "formatQuality": {
+      "jpeg": 80,
+      "webp": 90
+    },
+    "maxScaleFactor": 3,
+    "maxSize": 2048,
+    "pbfAlias": "pbf",
+    "serveAllFonts": false,
+    "serveAllStyles": false,
+    "serveStaticMaps": true,
+    "tileMargin": 0
+  },
+  "styles": {
+    "mtbS0": {
+      "style": "mtbS0.json",
+      "tilejson": {
+        "type": "overlay"
+      }
+    },
+    "mtbS1": {
+      "style": "mtbS1.json",
+      "tilejson": {
+        "type": "overlay"
+      }
+    },
+    "mtbS2": {
+      "style": "mtbS2.json",
+      "tilejson": {
+        "type": "overlay"
+      }
+    },
+    "mtbS3": {
+      "style": "mtbS3.json",
+      "tilejson": {
+        "type": "overlay"
+      }
+    },
+    "mtbS4": {
+      "style": "mtbS4.json",
+      "tilejson": {
+        "type": "overlay"
+      }
+    },
+    "mtb_potential": {
+      "style": "mtb_potential.json",
+      "tilejson": {
+        "type": "overlay"
+      }
+    },
+    "mtb_high_potential": {
+      "style": "mtb_high_potential.json",
+      "tilejson": {
+        "type": "overlay"
+      }
+    },
+    "singletrailmap": {
+      "style": "singletrailmap.json",
+      "tilejson": {
+        "type": "overlay"
+      }
+    }
+  }
+}

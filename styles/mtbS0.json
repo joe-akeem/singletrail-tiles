@@ -1,0 +1,65 @@
+{
+  "version": 8,
+  "sources": {
+    "openmaptiles": {
+      "url": "mbtiles://tiles.mbtiles",
+      "type": "vector"
+    }
+  },
+  "options": {
+    "paths": {
+      "mbtiles": "/data"
+    },
+    "domains": [
+      "mbtiles.singletrail-map.eu"
+    ],
+    "formatQuality": {
+      "jpeg": 80,
+      "webp": 90
+    }
+  },
+  "layers": [
+    {
+      "id": "mtb_s0",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "transportation",
+      "filter": [
+        "all",
+        [
+          "==",
+          "mtb_scale",
+          "0"
+        ],
+        [
+          "==",
+          "class",
+          "path"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(58, 244, 48, 1)",
+        "line-opacity": 0.6,
+        "line-width": {
+          "stops": [
+            [
+              8,
+              3
+            ],
+            [
+              12,
+              5
+            ],
+            [
+              14,
+              8
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}
