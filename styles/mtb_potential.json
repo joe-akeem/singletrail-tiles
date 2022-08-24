@@ -1,7 +1,7 @@
 {
   "version": 8,
   "sources": {
-    "switzerland": {
+    "openmaptiles": {
       "url": "mbtiles://tiles.mbtiles",
       "type": "vector"
     }
@@ -20,10 +20,10 @@
   },
   "layers": [
     {
-      "id": "mtb_potential_path",
+      "id": "mtb_potential",
       "type": "line",
-      "source": "switzerland",
-      "source-layer": "mtb",
+      "source": "openmaptiles",
+      "source-layer": "transportation",
       "filter": [
         "all",
         [
@@ -34,6 +34,71 @@
         [
           "!has",
           "mtb_scale"
+        ],
+        [
+          "!in",
+          "sac_scale",
+          "demanding_mountain_hiking",
+          "alpine_hiking",
+          "demanding_alpine_hiking",
+          "difficult_alpine_hiking"
+        ]
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "rgba(218, 204, 29, 1)",
+        "line-width": {
+          "stops": [
+            [
+              8,
+              3
+            ],
+            [
+              12,
+              5
+            ],
+            [
+              14,
+              8
+            ]
+          ]
+        },
+        "line-opacity": 0.6
+      }
+    },
+    {
+      "id": "mtb_high_potential_path",
+      "type": "line",
+      "source": "openmaptiles",
+      "source-layer": "transportation",
+      "filter": [
+        "all",
+        [
+          "in",
+          "class",
+          "path"
+        ],
+        [
+          "!has",
+          "mtb_scale"
+        ],
+        [
+          "in",
+          "surface",
+          "unpaved",
+          "compacted",
+          "fine_gravel",
+          "gravel",
+          "pebblestone",
+          "ground",
+          "dirt",
+          "earth",
+          "grass",
+          "mud",
+          "sand",
+          "woodchips"
         ],
         [
           "!in",
@@ -65,7 +130,7 @@
           ]
         },
         "line-opacity": 0.6,
-        "line-color": "rgba(218, 204, 29, 1)"
+        "line-color": "rgba(247, 156, 10, 1)"
       }
     }
   ]
