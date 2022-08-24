@@ -1,5 +1,6 @@
 {
   "version": 8,
+  "name": "MTB Singletrails",
   "sources": {
     "openmaptiles": {
       "url": "mbtiles://tiles.mbtiles",
