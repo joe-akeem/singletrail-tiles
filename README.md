@@ -1,12 +1,12 @@
 # singletrail-tiles
 
 Additional maps and overlays for https://bikerouter.de (or https://gpx.studio) that highlight singletrails for mountain biking.
-They can be added as custom base maps and overlays to https://bikerouter.de or https://gpx.studio.
+They can be added as custom base maps and overlays.
 
 ## Introduction
 
 https://bikerouter.de and https://gpx.studio are tremendously useful tools to prepare GPX tracks for cycling adventures.
-However, I was never happy with the available options of maps and overlays that highlight singletrails for mountain biking
+However, I was never happy with the available options of maps and overlays highlighting singletrails for mountain biking
 that would let me choose the best singletrails according to my bike riding skills. Being used to the
 [swiss map style](https://prod-swishop-s3.s3.eu-central-1.amazonaws.com/2022-08/symbols_en.pdf) I was looking for something
 that looked like a swisstop map with simple highlights of singletrails from green to black (just like ski pistes) according
@@ -61,9 +61,9 @@ the data as well as a list of map styles.
 
 From the main page at http://localhost:8080/ you can navigate to the TileJSON definitions of each style. Each style has
 an individual URL at which the map tiles are served. They look something like `http://localhost:8080/styles/mtb/{z}/{x}/{y}.png`.
-These URLs are the ones bikerouter.de (or gpx.studio) needs to request the map tiles depending on the currently displayed section of the map.
+These URLs are the ones https://bikerouter.de (or https://gpx.studio) needs to request the map tiles depending on the currently displayed section of the map.
 
-Here is a list of the provided styles along with the URLs that are relevant to bikerouter.de and gpx.studio:
+Here is a list of the provided styles along with the URLs that are relevant to https://bikerouter.de and https://gpx.studio:
 
 |Style|Description|Tiles URL|
 |---|---|---|
@@ -71,10 +71,10 @@ Here is a list of the provided styles along with the URLs that are relevant to b
 | mtb_potential | A map style that can be used as an _overlay_ to highlight the paths on the map that might be suitable for MTB riding but that don't have an `mtb_scale` tag according to OSM. The paths are highlighted using different colors depending on the how likely they are suited (based on some other tags like hiking difficulty etc. Orange means higher potential than yellow) |http://localhost:8080/styles/mtb_potential/{z}/{x}/{y}.png |
 | singletrailmap | A map that can be used as a _base map_. It is a complete map style that is similar to the swisstopo style and that has additionally the singletrails highlighted as in the `mtb`style above. This map can be combined with other overlays in gpx.studio. | http://localhost:8080/styles/singletrailmap/{z}/{x}/{y}.png |
 
-The map layers can be added to e.g. bikerouter.de as custom layers. Make sure you choose the right layer type. `Overlay`
+The map layers can be added to e.g. https://bikerouter.de as custom layers. Make sure you choose the right layer type. `Overlay`
 is meaningful for the `mtb`and `mtb_potential` styles while `singletrailmap` is more suitable as `Basemap`.
 
-Once the custom layers have been added in bikerouter.de or gpx.studio, they can be randomly mix and matches with the
+Once the custom layers have been added in https://bikerouter.de or https://gpx.studio, they can be randomly mixed with the
 already existing layers.
 
 ![Custom Layers](img/custom_layers.png)
