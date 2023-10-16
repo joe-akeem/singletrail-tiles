@@ -28,7 +28,7 @@ Use my [openmaptiles-singletrailmap project](https://github.com/joe-akeem/openma
 file for the desired area. For example to create suitable data for the area of the whole alps, you would run
 
 ```bash
-$ ./quickstart.sh europe/alps
+./quickstart.sh europe/alps
 ```
 
 in that project. The resulting `tiles.mbtiles` file must then be copied to this project's `data` folder.
@@ -38,20 +38,19 @@ in that project. The resulting `tiles.mbtiles` file must then be copied to this 
 1. Clone the project to your local computer:
 
 ```bash
-$ git clone https://github.com/joe-akeem/singletrail-tiles.git
-$ cd singletrail-tiles
+git clone https://github.com/joe-akeem/singletrail-tiles.git; cd singletrail-tiles
 ``` 
 
 2. Copy the `tiles.mbtiles` file (see above):
 
 ```bash
-$ cp ../openmaptiles-singletrailmap/data/tiles.mbtiles data
+mkdir data; cp ../openmaptiles-singletrailmap/data/tiles.mbtiles data
 ``` 
 
 3. Run the tile server:
 
 ```bash
-$ docker-compose up
+docker-compose up
 ``` 
 
 In order to verify that the tile server is running properly visit http://localhost:8080/. You should be able to inspect
